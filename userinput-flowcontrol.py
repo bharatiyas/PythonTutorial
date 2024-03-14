@@ -22,10 +22,12 @@ while playagain:
     print('\nYour possible choices: \n 1 For Rock \n 2 For Paper \n 3 For Scissors\n\n')
     playerchoice = input('Enter your choice - ')
 
+    if playerchoice not in ["1", "2", "3"]:
+        continue
+
     playerchoiceInt = int(playerchoice)
 
-    if playerchoiceInt < 1 or playerchoiceInt > 3:
-        sys.exit('You must enter 1, 2 or 3')
+    
 
     computerChoice = random.choice("123") # One of the characters will be choosen randomly
     computerChoiceInt = int(computerChoice)
