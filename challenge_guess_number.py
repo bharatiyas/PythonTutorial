@@ -35,14 +35,16 @@ def guess_the_number(name = "Player1"):
             else:
                 print(f"{name}, sorry your guess was incorrect. You lost!!")                
             while True:
-                cont = input(f"{name}, do you want to play again? [Y/N]: ")
+                cont = input(f"{name}, do you want to play guessing game again? [Y/N]: ")
                 if cont.lower() == "y":
-                    break
-                elif cont.lower() == "n":
-                    play_again = False
-                    break
+                    return play()
                 else:
-                    print(f"{name}, please enter Y or N")
+                    print("\n🎉🎉🎉🎉")
+                    print("Thank you for playing!\n")
+                    if __name__ == '__main__':
+                        sys.exit(f"Bye {name}! 👋")
+                    else:
+                        return
 
 
         print(f"Final result: \n Total Rounds - {number_of_rounds} \n {name} won - {player_won}")

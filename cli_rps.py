@@ -65,7 +65,7 @@ def rps(name = 'PlayerOne'):
         print(f"\n{name}'s win: {player_wins}")
         print(f"\nPython wins: {python_wins}")
 
-        print(f"\nPlay again, {name}?")
+        print(f"\nPlay Rock-Paper-Scissors game again, {name}?")
 
         while True:
             playagain = input("\nY for Yes or \nQ to Quit\n")
@@ -79,7 +79,10 @@ def rps(name = 'PlayerOne'):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            sys.exit(f"Bye {name}! 👋")
+            if __name__ == '__main__':
+                sys.exit(f"Bye {name}! 👋")
+            else:
+                return
 
     return play_rps
 
