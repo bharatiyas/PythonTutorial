@@ -1,6 +1,8 @@
 # modules are libraries that are based on common features like math, requests, etc
 # modules contain functions or/and constants
 
+# To see the list of modules visit:     https://docs.python.org/3/py-modindex.html
+
 import sys
 import random as rdm    # Using alias for imports
 
