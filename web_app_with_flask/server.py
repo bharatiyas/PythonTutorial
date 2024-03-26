@@ -12,9 +12,28 @@ app = Flask(__name__)   # This makes our app a Flask app
 @app.route('/index')
 
 def index():
-    return "Hello World!"
+    return render_template('index.html')
+
+@app.route('/weather')
+def get_weather():
+    city = request.args.get('city')
+    if not bool(city.strip()):
+        city = "Ranchi"
+    weather_data = get_current_weather(city)
+    
+    # City not found
+    if not weather_data['cod']  == 200:
+        return render_template('city-not-found.html')
+    
+    return render_template(
+        "weather.html",
+        title = weather_data["name"],
+        status = weather_data["weather"][0]["description"].capitalize(),
+        temp = f"{weather_data['main']['temp']:.1f}",
+        feels_like = f"{weather_data['main']['feels_like']:.1f}"
+    )
 
 if __name__ == "__main__":
     # app.run(host = "0.0.0.0", port = 8000)    # get local development server warning
-    serve(app, host="0.0.0.0", port=8000)
+    serve(app, host="0.0.0.0", port=8000)   # Server appropriate for production
 

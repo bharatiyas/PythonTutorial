@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-def get_current_weather(city = "Ranchi"):
+def get_current_weather(city):
     
     request_url = f"https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric"
 
@@ -15,5 +15,10 @@ def get_current_weather(city = "Ranchi"):
 
 if __name__ == "__main__":
     city = input("\n Please enter City name: ")
+
+    # Check for valid entry
+    if not bool(city.strip()):
+        city = "Ranchi"
+
     print(f"Weather conditions in {city}")
-    print(get_current_weather())
+    print(get_current_weather(city))
