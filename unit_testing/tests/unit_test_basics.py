@@ -15,5 +15,6 @@
 
 # Unit test - help you to test your code (and changes made later) quick and easy
 
+print('Hello PyCharm')
 
 

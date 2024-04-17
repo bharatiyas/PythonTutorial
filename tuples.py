@@ -1,11 +1,21 @@
-# Tuples are like lists. But the data inside the tuples will NOT change. Also, the order of the data will NOT change
+"""
+Tuples are like lists. But the data inside the tuples will NOT change which means they are immutable.
+Also, the order of the data will NOT change.
+Execution in Tuples is faster than List
+"""
 
 tuple1 = tuple(('Sanjay', 44, True))
 print(tuple1)
 
-tuple2 = ('Bharatiya', 3, 4.5, False, 3, 3, 4)
+#  +ve index  0          1   2     3    4  5  6
+tuple2 = ('Bharatiya', 3, 4.5, False, 3, 3, 4)      # Creating Tuple without constructor
+# -ve index  -7       -6   -5   -4   -3 -2 -1
 print(tuple2)
 print(type(tuple2))
+
+# Slicing a tuple
+sliced_tuple = tuple2[1:5]
+print(sliced_tuple)
 
 # Most of the things which apply to List are also applicable to Tuples, except they cannot be changed
 

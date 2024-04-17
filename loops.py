@@ -4,11 +4,10 @@ value = 1
 while value <= 10:
     print(value)
     value += 1
-else:
-    print("Prints when the while condition is not true")
+
 
 value = 1
-while value <= 10:
+while value <= 10:      # Executes until the condition is true
     print(value)
     if value == 5:
         print("Time to break")
@@ -34,7 +33,7 @@ else:
 
 names = ["Sanjay", "Vandana", "Idhant"]
 
-for n in names:
+for n in names:     # we need to provide an iterable in for loop
     print(n)
 else:
     print("Executed when for-loop condition is not satisfied")
@@ -63,3 +62,28 @@ for name in names:
 for action in actions:
     for name in names:
         print(name + " " + name + ".")
+
+# Looping through dictionary
+name_age_dict = {
+    "John": 23,
+    "Smith": 43,
+    "Bella": 32,
+    "Hermit": 64
+}
+
+print("Printing dictionary: ")
+for key in name_age_dict:
+    print(key, name_age_dict[key])
+
+
+products = [
+    {"name": "iPhone", "price": 1500},
+    {"name": "iPad", "price": 1000},
+    {"name": "Smartwatch", "price": 150},
+    {"name": "iMac", "price": 3000},
+    {"name": "iMini", "price": 2000}
+]
+
+for index, product in enumerate(products):     # Access the index of the element of the list
+    print(f"{index}: {product["name"]}, {product["price"]}")
+

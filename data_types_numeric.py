@@ -34,3 +34,6 @@ print(math.floor(gpa))
 zipcode = "10000"
 zipcode_int = int(zipcode)
 print(type(zipcode_int))
+
+# // gets only the interger part of the division (which is the quotient). In this case it is 3
+print( 15 // 4)

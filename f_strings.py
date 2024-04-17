@@ -33,6 +33,8 @@ print("New with dictionary - " + message)
 message = f"\n {person} has {coins} coins left."
 print("New with f-strings - " + message)
 
+# You can put any python code between {}
+
 message = f"\n {person} has {2*4} coins left."  # Perform an operation
 print("New with f-strings - " + message)
 

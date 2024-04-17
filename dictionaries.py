@@ -1,10 +1,18 @@
 # dictionaries are used to store data in (Key, Value) pair
+# key and value both can be a string or a number
+
+people_id = {
+    1: "Ford",
+    2: "Walton",
+    3: "Parker"
+}
 
 band = {
     "vocals": "Plant",
     "guitar": "Page"
 }
 
+# using dict function to create a dictionary
 band2 = dict(vocals="Plant", guitar="Page")
 
 print(band)
@@ -12,9 +20,11 @@ print(band2)
 print(type(band2))
 print(len(band))
 
-# Access elements in the dictionaries
+# Access elements in the dictionaries. If the key does not exist in the dictionary this will throw an error
 print(band["vocals"])
 
+# Obtain the value using get method. The advantage here is that if the key does not exist in the dictionary then it will
+# return None instead of an error.
 print(band.get("guitar"))
 
 # List all keys
@@ -31,14 +41,19 @@ print("guitar" in band)
 print("Page" in band)
 print("triangle" in band)
 
-# Change values
+# Change values. Dictionaries (like List) are mutable.
+# If the key already exists then it is updated otherwiese a new entry is added
 band["vocals"] = "Coverdale"
+
+# Merge two dictionaries. New dictionaries values are added to the older ones. Any existing keys are updated new values.
+# New keys are added with new values.
 band.update({"bass": "JPJ"})
 
 print(band)
 
 # Remove items
-print(band.pop("bass")) # pop returns the value which has been removed
+bass = band.pop("bass")  # pop returns the value which has been removed
+print(bass)
 print(band)
 
 band["drums"] = "Bonham"
@@ -50,7 +65,7 @@ print(band)
 # Delete and clear
 
 band["drums"] = "Bonham"
-del band["drums"] # Deletes a specific key
+del band["drums"]  # Deletes a specific key
 print(band)
 
 band2.clear() # Clears out all the elements
@@ -67,7 +82,7 @@ bandCopy1["drums"] = "Mridanga"
 print(band)
 print(bandCopy1)
 
-bandCopy2 = dict(band) # use the constructor to create a copy
+bandCopy2 = dict(band)  # use the constructor to create a copy
 bandCopy2["drums"] = "tabla"
 print(bandCopy2)
 

@@ -9,7 +9,7 @@ print(type(firstName))
 print(type(firstName) == str)
 print(isinstance(firstName, str))
 
-## Using Constructor function
+# Creting a string using the function.
 
 pizza = str("Chicken")
 
@@ -79,3 +79,6 @@ print(firstName[2:])
 print(firstName.startswith("S"))
 print(firstName.endswith("Z"))
 
+# Printing a number multiple times
+
+print("Sanjay " * 5)

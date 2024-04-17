@@ -14,10 +14,11 @@ from closure_rps import rock_paper_scissors
 print(pi)
 print(rdm.choice("1234"))
 
-#print(dir(sys))     # Print the list of functions in side the module
+# Print the list of functions in side the module
+# print(dir(sys))
 
-#for item in dir(rdm):
-#    print(item)
+# for item in dir(rdm):
+# print(item)
 
 print(__name__)     # this prints __main__ which is default name of the module which is running. Every module has it
 
