@@ -27,4 +27,6 @@ else:           # When no errors are thrown
     print('No errors!')    
 finally:
     print('Finally reached finally ')   # Control reaches here with or without an error
+                                        # Close file, DB connection, socket connection, etc.
+
 

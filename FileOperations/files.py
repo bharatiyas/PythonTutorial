@@ -17,8 +17,8 @@ f = open("names.txt", "r")      # r - read the file (default value)
 #  print(f.read())      # Read the file
 print(f.read(5))    # Read first 5 chars of the file
 
-# print(f.readline()) # Read a line from the file
-# print(f.readline())
+# print(f.readline()) # Read a line from the file and then moved the file pointer to the next line. We read lines 1 by 1
+# print(f.readlines())  # Reads multiple lines and returns them as a list of string
 
 for line in f:      # Loop through the lines of the file
     print(line)
@@ -39,6 +39,8 @@ fa.write("\nShubhankar")
 fa.close()
 
 try:
+    # with is like a loop. When we use with to open a file, the file will be automatically closed by Python. We do
+    # NOT exclusively close the file
     with open("names.txt") as fdne:
         print(fdne.read())
 except FileNotFoundError:

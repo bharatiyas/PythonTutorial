@@ -79,6 +79,12 @@ print(firstName[2:])
 print(firstName.startswith("S"))
 print(firstName.endswith("Z"))
 
-# Printing a number multiple times
-
+# Printing a string multiple times
 print("Sanjay " * 5)
+
+# Strip out white space on both sides of a string
+text = "   hello world	"
+print(text.strip())
+print(text.lstrip())	 # Just trim spaces in left
+print(text.rstrip())	 # Just trim spaces in right
+
