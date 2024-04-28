@@ -21,6 +21,7 @@ print(users[0:3])  # Does not include the value at position 3
 
 print(users[1:])  # Includes the value at position 1
 
+# Size/length of the list
 print(len(users))
 
 # Lists are mutable, means they can be changed
@@ -90,6 +91,12 @@ numscopy6 = nums[-3:0]  # this will not create any copy because we are mixing -v
 print(numscopy4)
 print(type(nums))
 
+# List slicing with [start:end:step]
+alphabets = "abcdefghijklmnop"
+print(alphabets[3:8:2])
+print(alphabets[::2])
+print(alphabets[::-1])		# Reverses the string/list
+
 mylist = list([1, "Sanjay", True, 3.45, nums]) # Nesting a list inside a list. One list can have members of different datatypes
 print(mylist)
 
@@ -111,3 +118,7 @@ print((min(numbers)))
 # you can have nested lists and there is no limitation on the number levels of nesting
 nested_list = [1, 2, [3, 4], 5, 6, [7, 8, 9], 10]
 print(nested_list[2][1])    # This will print 4
+
+# join() to join all the elements of a list
+apple = ['a', 'p', 'p', 'l', 'e']
+print("".join(apple))
