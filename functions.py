@@ -1,3 +1,6 @@
+# All the functions in python starting with __ are callback functions, meaning we do not call them instead they are
+# called by the interpreter
+
 def say_hello():     # use def to define a function. All lower case and words separated by _
     print("Hello world!!")
 
