@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books Available</title>
+</head>
+<body>
+    <h1>Following is the list of books we have: </h1>
+   <!-- <p1>{{book_list}}</p1> -->
+
+    <h2>Pretty list</h2>
+    {% for book in book_list %}
+        {# Used to put single line comments #}
+        {# <a href="/books/{{book.id}}"> {{book.name}} </a> <br> #}
+        {# <a href="{% url 'detail_url' book.id %}"> {{book.name}} </a> #}
+
+        {# Using namespace to identify URLs #}
+        <a href="{% url 'myapp:detail_url' book.id %}"> {{book.name}} </a> <br>
+    {% endfor %}
+</body>
+</html>

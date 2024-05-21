@@ -1,0 +1,23 @@
+Files inside mysite
+===================
+
+1.  __init__.py          -   Any directory that contains __init__.py is a Python package.
+2.  asgi.py              -   Used for configuration of the project.
+3.  settings.py          -   Contains settings required for your Django project like information about SQLite3 DB
+4.  urls.py              -   Configuration for handling incoming requests on different URLs
+5.  wsgi.py              -   Used while deploying the application on a real-world server
+6.  manage.py            -   Provides some commands that can be used.
+
+
+Files inside myapp
+===================
+
+1.  __init__.py          -   Any directory that contains __init__.py is a Python package.
+2.  admin.py             -   Used to customize the admin panel of your website. Django provides you with an admin panel
+                             OOTB.
+3.  apps.py              -   Contains the application config.
+4.  models.py            -   One of the most important files in the app. It defines the structure of the DB tables for
+                             the app. You defined models which are later converted into DB tables (similar approach as
+                             Entity as in JPA).
+5.  tests.py             -   Allows us to write certain test cases
+6.  views.py             -   Configure what you view on the web page.

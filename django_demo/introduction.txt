@@ -1,0 +1,33 @@
+ Django:
+ 1. It is an open source web app framework
+ 2. Has automatic admin interface which supports CRUD operations
+ 3. It gives you some predefined components and functions which you can use to do backend programming in Python
+ 4. Django provides framework for ORM
+ 5. It provides with SQLite as in-built DB
+
+ Install Django
+ Start a Django project go the desired folder and then type:
+
+ django-admin startproject mysite
+ If the above command does not work then try:
+
+ py -m django startproject <your_project_name>
+
+ Now create a django app. One django project can have multiple apps.
+ cd <your_project_name>
+ django-admin startapp myapp
+
+ If the above command does not work then try:
+ py -m django startapp myapp
+
+ Django has a local server to run the application for local development
+ python manage.py runserver
+
+ You will be able to open the home page of the server by visiting http://127.0.0.1:8000/
+
+ Templates allows us to generate HTML dynamically. But you need a templating engine to generate a HTML from a
+ templating engine. Django has its own templating engine.
+ Django first finds the template in its templates/<myapp> directory
+
+Then it renders the HTML with the context data (by replacing the values).
+
